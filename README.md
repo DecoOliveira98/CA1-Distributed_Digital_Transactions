@@ -15,7 +15,8 @@ A blockchain-based decentralized application (DApp) for tracking food products a
 | ------------------------- | ------ | ------------------------------------------------------------------- | ------ |
 | 0 – Setup                 | 27 Oct | Repository, environment (Ganache, Python, Remix), project structure | Done   |
 | 1 – Research & Design     | 27 oct | Business model, benefits & challenges, cryptography, references     | Done   |
-| 2 – Smart Contract & DApp | -      | Solidity contract, Remix + Ganache testing, Python & shell scripts  | To do  |
+| 2 – Smart Contract & DApp | 9 nov  | Solidity contract, Remix + Ganache testing, Python & shell scripts  | Done   |
+| 2.1 - Screenshots         | 9 nov  | take all screenshot of the test in Remix IDE                        | Done   |
 | 3 – Poster                | -      | PowerPoint poster (max. 700 words)                                  | To do  |
 | 4 – Video & Submission    | -      | Video presentation (max. 4 min), cover page, Moodle upload          | To do  |
 
@@ -62,7 +63,6 @@ scripts/                   Python deploy/interaction scripts and shell script
 docs/project_plan.ipynb    Step-by-step plan and research notes
 docs/poster_summary.md     Condensed research text for the poster
 docs/references.md         Harvard reference list
-docs/diagrams/             Diagrams (optional)
 docs/screenshots/          Screenshots of contract testing
 poster/                    PowerPoint poster presentation
 ```
