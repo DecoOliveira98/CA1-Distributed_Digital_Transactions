@@ -17,8 +17,8 @@ A blockchain-based decentralized application (DApp) for tracking food products a
 | 1 – Research & Design     | 27 oct | Business model, benefits & challenges, cryptography, references     | Done   |
 | 2 – Smart Contract & DApp | 9 nov  | Solidity contract, Remix + Ganache testing, Python & shell scripts  | Done   |
 | 2.1 - Screenshots         | 9 nov  | take all screenshot of the test in Remix IDE                        | Done   |
-| 3 – Poster                | -      | PowerPoint poster (max. 700 words)                                  | To do  |
-| 4 – Video & Submission    | -      | Video presentation (max. 4 min), cover page, Moodle upload          | To do  |
+| 3 – Poster                | 12 nov | PowerPoint poster (max. 700 words)                                  | Done   |
+| 4 – Video & Submission    | 13 nov | Video presentation (max. 4 min), cover page, Moodle upload          | Done   |
 
 The detailed checklist for each phase is in [`docs/project_plan.ipynb`](docs/project_plan.ipynb).
 
@@ -69,4 +69,35 @@ poster/                    PowerPoint poster presentation
 
 ## How to Run
 
-TODO – instructions will be added in Phase 2.
+**Requirements:** Python 3, Node.js and Git Bash (on Windows).
+
+```bash
+npm install -g ganache
+pip install web3 py-solc-x
+```
+
+### Option 1 – Automated (Python + shell script)
+
+```bash
+bash scripts/run.sh
+```
+
+This starts Ganache, deploys the contract (`deploy.py`) and runs the full supply chain flow (`interact.py`), then shuts Ganache down.
+
+To run the steps separately, start Ganache in one terminal and run the scripts in another:
+
+```bash
+ganache --wallet.deterministic --wallet.totalAccounts 5 --chain.chainId 1337
+python scripts/deploy.py
+python scripts/interact.py
+```
+
+### Option 2 – Remix IDE
+
+1. Start Ganache (command above).
+2. Open [Remix](https://remix.ethereum.org) and paste `contracts/FoodTrace.sol`.
+3. Compile with version 0.8.24 and **EVM version `shanghai`** (Advanced Configurations).
+4. In Deploy & Run, choose **Dev – Ganache Provider** (`http://127.0.0.1:8545`) and deploy with account 0 (admin).
+5. Use accounts 1–4 as Farmer, Processor, Distributor and Retailer.
+
+Screenshots of the tests are in [`docs/screenshots/`](docs/screenshots/).
